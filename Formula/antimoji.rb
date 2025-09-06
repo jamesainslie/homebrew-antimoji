@@ -1,45 +1,45 @@
 class Antimoji < Formula
   desc "High-performance emoji detection and removal CLI tool"
   homepage "https://github.com/jamesainslie/antimoji"
-  version "0.9.3"
+  version "0.9.5"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.3/antimoji-v0.9.3-darwin-amd64"
-      sha256 "73e3ac500f23733366adf600e2e9e73bb4ce9d5decb1ddc4df099d66217419f3"
+      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.5/antimoji_0.9.5_darwin_amd64.tar.gz"
+      sha256 "a2ca60b13f4965ea244090efaae2d3920571fbb06628abd7efd258cf2e30de39"
 
       def install
-        bin.install "antimoji-v0.9.3-darwin-amd64" => "antimoji"
+        bin.install "antimoji"
       end
     end
 
     on_arm do
-      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.3/antimoji-v0.9.3-darwin-arm64"
-      sha256 "674d5483bbfe9cb2edb363d787f9a159b1fce64da84aa965d8927ab21b3d6b23"
+      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.5/antimoji_0.9.5_darwin_arm64.tar.gz"
+      sha256 "37c67e6d0e5fea4c0c72094afe6ecb6f20243cf7a16e58c6f2fc45ea78e1fc29"
 
       def install
-        bin.install "antimoji-v0.9.3-darwin-arm64" => "antimoji"
+        bin.install "antimoji"
       end
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.3/antimoji-v0.9.3-linux-amd64"
-      sha256 "6061f9a32e9432c4ae6a5d2c1111b14c62f5a69f8ad6f59b81f09bb5ffaf9204"
+      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.5/antimoji_0.9.5_linux_amd64.tar.gz"
+      sha256 "a1a119d1acce66614d3dad7cb51e913e09ae252626ded4d5be54d53ecec83793"
 
       def install
-        bin.install "antimoji-v0.9.3-linux-amd64" => "antimoji"
+        bin.install "antimoji"
       end
     end
 
     on_arm do
-      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.3/antimoji-v0.9.3-linux-arm64"
-      sha256 "2e66731c823bc32f1e048b55c47fc53520cd93d7089f9c2b08eeca00d35bb89f"
+      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.5/antimoji_0.9.5_linux_arm64.tar.gz"
+      sha256 "87bb2b1c91d21ca45474fc58ee744918af60fca9ba0797877e0830925c622890"
 
       def install
-        bin.install "antimoji-v0.9.3-linux-arm64" => "antimoji"
+        bin.install "antimoji"
       end
     end
   end
@@ -61,6 +61,7 @@ class Antimoji < Formula
         antimoji scan .                    # Scan for emojis
         antimoji clean --backup .          # Remove emojis with backup
         antimoji generate --type=ci-lint . # Generate allowlist config
+        antimoji setup-lint --mode=zero-tolerance  # Setup automated linting
       
       Documentation: https://github.com/jamesainslie/antimoji
     EOS
