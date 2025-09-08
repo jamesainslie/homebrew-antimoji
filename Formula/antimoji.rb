@@ -5,21 +5,21 @@
 class Antimoji < Formula
   desc "High-performance emoji detection and removal CLI tool"
   homepage "https://github.com/jamesainslie/antimoji"
-  version "0.9.15"
+  version "0.9.16"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.15/antimoji_0.9.15_darwin_amd64.tar.gz"
-      sha256 "597b5502ba75abd2fb00fd1cfe8d45ba499503260150b49aef2a54b743b2fa47"
+      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.16/antimoji_0.9.16_darwin_amd64.tar.gz"
+      sha256 "648f8d792638a762229cec3279a1535c0c6cdaef4f546b79e07abb976e0b5919"
 
       def install
         bin.install "antimoji"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.15/antimoji_0.9.15_darwin_arm64.tar.gz"
-      sha256 "93a567428b6c016cd6c9caf0b7f2fb4c7fcbbe58932c50544661f9f0349d52a7"
+      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.16/antimoji_0.9.16_darwin_arm64.tar.gz"
+      sha256 "c580140fd13867663d7c3778bac114d5fc99d811732169e21f2051bfb6b410f4"
 
       def install
         bin.install "antimoji"
@@ -29,15 +29,15 @@ class Antimoji < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.15/antimoji_0.9.15_linux_amd64.tar.gz"
-      sha256 "fa0ad5941d36a93ded5244f672283cb9cc4552bee36318700f5cce71e9730dba"
+      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.16/antimoji_0.9.16_linux_amd64.tar.gz"
+      sha256 "2cd5be64a80f7eec4be1de8abf8476aa473c626fe02444d40b9b384f640b9230"
       def install
         bin.install "antimoji"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.15/antimoji_0.9.15_linux_arm64.tar.gz"
-      sha256 "c398bd77caa118b0c599fe19836210db2e00cb9cebadad9e23869df7f3b31222"
+      url "https://github.com/jamesainslie/antimoji/releases/download/v0.9.16/antimoji_0.9.16_linux_arm64.tar.gz"
+      sha256 "f48f6fbc651e070b4bc84fda26fb668ae98932ee9d89963503e8391ca36b8f8b"
       def install
         bin.install "antimoji"
       end
